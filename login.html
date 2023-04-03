@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <header>
+        <h1>Login to Keller Schroeder</h1>
+    </header>
+    <main>
+        <p>Please enter your email and password.</p>
+        <p><span class="required">* Denotes a required field.</span></p>
+        <form class="form-inputs">
+            <div class="form-group">
+                <label for="email"><span class="required">*</span>Email:</label>
+                <input type="text"
+                       placeholder="name@domain.com" 
+                       id="email" 
+                       name="email">
+                <p id="email-error"></p>
+            </div>
+            <div class="form-group" action="/success.html">
+                <label for="password"><span class="required">*</span>Password:</label>
+                <input type="password" 
+                       placeholder="Type Password Here"
+                       id="password" 
+                       name="password">
+                <p id="password-error"></p>
+            </div>
+            <button type="submit" id="login-button">Login</button>
+        </form>
+    </main>
+    <script src="./login.js"></script>
+</body>
+</html>
