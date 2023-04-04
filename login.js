@@ -23,8 +23,9 @@ function validEmail(){
         isValidEmail = true;
     }
     
-    if(isValidEmail === false){
+    if(!isValidEmail){
         emailInput.classList.add("red-border");
+        emailError.style.visibility = "visible";
     }
 
     return isValidEmail;
@@ -47,8 +48,9 @@ function validPassword(){
         isValidPassword = true;
     }
 
-    if(isValidPassword === false){
+    if(!isValidPassword){
         passwordInput.classList.add("red-border");
+        passwordError.style.visibility = "visible";
     }
 
     return isValidPassword;
