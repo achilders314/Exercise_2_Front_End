@@ -19,7 +19,6 @@ function validEmail(){
         emailError.innerText = "Email must be a valid email."
     }
     else{
-        emailError.innerText = "";
         isValidEmail = true;
     }
     
@@ -44,7 +43,6 @@ function validPassword(){
         passwordError.innerText = "Password must contain at least one uppercase letter, one lowercase letter, and one number."
     }
     else{
-        passwordError.innerText = "";
         isValidPassword = true;
     }
 
@@ -60,10 +58,10 @@ function validPassword(){
 
 function validateAndSubmit(e){
     e.preventDefault();
-    emailError.innerText = "";
-    passwordError.innerText = "";
     emailInput.classList.remove("red-border")
     passwordInput.classList.remove("red-border")
+    emailError.style.visibility = "hidden";
+    passwordError.style.visibility = "hidden";
 
     let isValidEmail = validEmail();
     let isValidPassword = validPassword();
