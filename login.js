@@ -14,7 +14,7 @@ function validEmail(){
     if(email.length === 0){
         emailError.innerText = "Please enter an email."
     }
-    else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    else if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     .test(email) === false){
         emailError.innerText = "Email must be a valid email."
     }
@@ -68,5 +68,11 @@ function validateAndSubmit(e){
 
     if(isValidEmail && isValidPassword){
         window.location.href="./success.html";
+    }
+    else if(!isValidEmail){
+        emailInput.focus();
+    }
+    else{
+        passwordInput.focus();
     }
 }
